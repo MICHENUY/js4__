@@ -1,0 +1,256 @@
+Index: js4.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js4.css b/js4.css
+--- a/js4.css	(revision 6cc15e6079c6560b2124eab023498d7990b9f7d6)
++++ b/js4.css	(date 1668806717409)
+@@ -1,0 +1,34 @@
++*{
++    background: #fdffe5;
++}
++.product_card{
++    width: 1800px;
++    display: flex;
++    justify-content: center;
++}
++.product_title {
++    display: flex;
++    justify-content: start;
++    align-items: center;
++    font-size: 25px;
++    margin:0 1000px;
++}
++.product_image{
++    display: flex;
++    justify-content: flex-end;
++}
++
++.wrap{
++    width: 1800px;
++    height: 1000px;
++    display: flex;
++    flex-wrap: wrap;
++    justify-content: space-between;
++    align-items: start;
++    }
++.post_card{
++    width: 20%;
++    height: 300px;
++    text-align: justify;
++
++}
+\ No newline at end of file
+Index: main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>$Title$</title>\r\n</head>\r\n<body>\r\n$END$\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.html b/main.html
+--- a/main.html	(revision 6cc15e6079c6560b2124eab023498d7990b9f7d6)
++++ b/main.html	(date 1668798929424)
+@@ -1,10 +1,15 @@
+-<!DOCTYPE html>
++<!doctype html>
+ <html lang="en">
+ <head>
+-  <meta charset="UTF-8">
+-  <title>$Title$</title>
++    <meta charset="UTF-8">
++    <meta name="viewport"
++          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
++    <meta http-equiv="X-UA-Compatible" content="ie=edge">
++    <title>js 4</title>
++    <script src="js4.js"></script>
++    <link rel="stylesheet" href="js4.css">
+ </head>
+ <body>
+-$END$
++
+ </body>
+ </html>
+\ No newline at end of file
+Index: js4.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nlet users = [\r\n    {name: 'petya', age: 31, status: false},\r\n    {name: 'petya', age: 30, status: true},\r\n    {name: 'kolya', age: 29, status: true},\r\n    {name: 'max', age: 28, status: false},\r\n    {name: 'max', age: 30, status: true},\r\n    {name: 'anya', age: 31, status: false},\r\n    {name: 'oleg', age: 28, status: false},\r\n    {name: 'andrey', age: 29, status: true},\r\n    {name: 'masha', age: 30, status: true},\r\n    {name: 'oleh', age: 31, status: false},\r\n    {name: 'max', age: 31, status: true}\r\n];\r\nfor (let i = 0; i < users.length; i++){\r\n\r\n    document.write(`<div>\r\n<h2>${users.name} </h2>\r\n<p>${users.age}</p>\r\n<h5>${users.status}</h5>\r\n</div>`);\r\n}\r\n\r\nlet sh = [\r\n    { np :'erge'},\r\n    { np:'erhh'},\r\n    { np:'rthe'},\r\n    { np:'ertgh'},\r\n    { np:'ytik'},\r\n    { np:'srvg'},\r\n    { np :'trryt'},\r\n    { np :'grrd'},\r\n    { np:'sgh'},\r\n    { np:'sgdsv'},\r\n\r\n];\r\nfor (let i = 0; i < sh.length; i++) {\r\n    document.write(`<div>\r\n<p>${sh.np}</p>\r\n</div>`)\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js4.js b/js4.js
+--- a/js4.js	(revision 6cc15e6079c6560b2124eab023498d7990b9f7d6)
++++ b/js4.js	(date 1668803777665)
+@@ -1,41 +1,132 @@
+ 
+-let users = [
+-    {name: 'petya', age: 31, status: false},
+-    {name: 'petya', age: 30, status: true},
+-    {name: 'kolya', age: 29, status: true},
+-    {name: 'max', age: 28, status: false},
+-    {name: 'max', age: 30, status: true},
+-    {name: 'anya', age: 31, status: false},
+-    {name: 'oleg', age: 28, status: false},
+-    {name: 'andrey', age: 29, status: true},
+-    {name: 'masha', age: 30, status: true},
+-    {name: 'oleh', age: 31, status: false},
+-    {name: 'max', age: 31, status: true}
+-];
+-for (let i = 0; i < users.length; i++){
++
++
++// let sh = [
++//     { xxx:'erge'},
++//     { xxx:'erhh'},
++//     { xxx:'rthe'},
++//     { xxx:'ertgh'},
++//     { xxx:'ytik'},
++//     { xxx:'srvg'},
++//     { xxx:'trryt'},
++//     { xxx:'grrd'},
++//     { xxx:'sgh'},
++//     { xxx:'sgdsv'},
++//
++// ];
++//
++// for (let i = 0; i < sh.length; i++) {
++//     const she = sh[i];
++//     document.write(`
++// <div>
++// <p>
++// ${she.xxx}
++// </p>
++// </div>
++// `)
++//
++// }
++
++// let users = [
++//     {name: 'petya', age: 31, status: false},
++//     {name: 'petya', age: 30, status: true},
++//     {name: 'kolya', age: 29, status: true},
++//     {name: 'max', age: 28, status: false},
++//     {name: 'max', age: 30, status: true},
++//     {name: 'anya', age: 31, status: false},
++//     {name: 'oleg', age: 28, status: false},
++//     {name: 'andrey', age: 29, status: true},
++//     {name: 'masha', age: 30, status: true},
++//     {name: 'oleh', age: 31, status: false},
++//     {name: 'max', age: 31, status: true}
++// ];
++// for (let i = 0; users.length - 2; i++){
++//     const user = users[i]
++//     document.write(`<div>
++// <h2>${user.name} </h2>
++// <p>${user.age}</p>
++// <h5>${user.status}</h5>
++// </div>`);
++// }
++
++
++// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
++// for (const listOfItem of listOfItems) {
++//     document.write(`
++//  <ul>
++//  <li>
++//  ${listOfItem}
++// </li>
++// </ul> `)
++// }
++
++
++// let products = [
++//     {
++//         title: 'milk',
++//         price: 22,
++//         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
++//     },
++//     {
++//         title: 'juice',
++//         price: 27,
++//         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
++//     },
++//     {
++//         title: 'tomato',
++//         price: 47,
++//         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
++//     },
++//     {
++//         title: 'tea',
++//         price: 15,
++//         image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
++//     },
++// ];
++//
++// for (const product of products) {
++//     document.write(
++//         `<div class="product_card">
++// <h3 class="product_title">${product.title} - ${product.price} UAN</h3>
++// <img src="${product.image}" alt="staff" class="product-image">
++// </div>`
++//     )
++// }
+ 
+-    document.write(`<div>
+-<h2>${users.name} </h2>
+-<p>${users.age}</p>
+-<h5>${users.status}</h5>
+-</div>`);
+-}
++// let users = [
++//     {name: 'vasya', age: 31, status: false},
++//     {name: 'petya', age: 30, status: true},
++//     {name: 'kolya', age: 29, status: true},
++//     {name: 'olya', age: 28, status: false},
++//     {name: 'max', age: 30, status: true},
++//     {name: 'anya', age: 31, status: false},
++//     {name: 'oleg', age: 28, status: false},
++//     {name: 'andrey', age: 29, status: true},
++//     {name: 'masha', age: 30, status: true},
++//     {name: 'olya', age: 31, status: false},
++//     {name: 'max', age: 31, status: true}
++// ];
+ 
+-let sh = [
+-    { np :'erge'},
+-    { np:'erhh'},
+-    { np:'rthe'},
+-    { np:'ertgh'},
+-    { np:'ytik'},
+-    { np:'srvg'},
+-    { np :'trryt'},
+-    { np :'grrd'},
+-    { np:'sgh'},
+-    { np:'sgdsv'},
++// for (let i = 0; i < users.length; i++) {
++//     const user = users[i];
++//     if (user.status > false ){
++//         document.write(`<h1>${user.name} ${user.age} ${user.status}</h1>`)
++//     }
++//
++// }
++// for (let i = 0; i < users.length; i++) {
++//     const user = users[i];
++//     if (user.status < true ){
++//         document.write(`<h1>${user.name} ${user.age} ${user.status}</h1>`)
++//     }
++//
++// }
+ 
+-];
+-for (let i = 0; i < sh.length; i++) {
+-    document.write(`<div>
+-<p>${sh.np}</p>
+-</div>`)
+-}
+\ No newline at end of file
++// for (let i = 0; i < users.length; i++) {
++//     const user = users[i];
++//     if (user.age > 30 ){
++//         document.write(`<h1>${user.name} ${user.age} ${user.status}</h1>`)
++//     }
++//
++// }
++
